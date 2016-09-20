@@ -11,7 +11,7 @@
   ;; (setq debug-on-error t)
   (init-packages-config)
   (init-evil)
-  ;; (init-solarized-theme)
+  (init-solarized-theme)
   ;; (init-monokai-theme)
   (init-default)
   (init-exec-path-osx)
