@@ -71,14 +71,14 @@
   (evil-mode 1)
 
   ;; Let me stay in insert mode longer.
-  (define-key evil-insert-state-map (kbd "C-n") 'next-line)
-  (define-key evil-insert-state-map (kbd "C-p") 'previous-line)
-  (define-key evil-insert-state-map (kbd "C-f") 'forward-char)
-  (define-key evil-insert-state-map (kbd "C-b") 'backward-char)
-  (define-key evil-insert-state-map (kbd "M-f") 'forward-word)
-  (define-key evil-insert-state-map (kbd "M-b") 'backward-word)
-  (define-key evil-insert-state-map (kbd "C-p") 'previous-line)
-  (define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
+  ;; (define-key evil-insert-state-map (kbd "C-n") 'next-line)
+  ;; (define-key evil-insert-state-map (kbd "C-p") 'previous-line)
+  ;; (define-key evil-insert-state-map (kbd "C-f") 'forward-char)
+  ;; (define-key evil-insert-state-map (kbd "C-b") 'backward-char)
+  ;; (define-key evil-insert-state-map (kbd "M-f") 'forward-word)
+  ;; (define-key evil-insert-state-map (kbd "M-b") 'backward-word)
+  ;; (define-key evil-insert-state-map (kbd "C-p") 'previous-line)
+  ;; (define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
   
   ;; Using 'jk' for switching from insert state to normal state
   (define-key evil-insert-state-map "j" #'cofi/maybe-exit)
@@ -539,3 +539,9 @@
   (interactive (progn (barf-if-buffer-read-only) '(t)))
   (let ((fill-column (point-max)))
     (fill-paragraph nil region)))
+
+;; ORG Settings
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-iswitchb)
